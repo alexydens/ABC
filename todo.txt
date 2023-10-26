@@ -1,0 +1,18 @@
+Features to implement:
+- Matrices - at least mat4, for 3d graphics purposes.
+- Custom allocators:
+    +-> Chunk allocator
+    +-> Linear allocator (Arena)
+- Platform layers to handle windowing, colored text, socket programming, etc.
+- Graphics API abstractions: Software renderer, OpenGL, Vulkan.
+- Fixed point numbers.
+- Strings as structures with char* and size.
+- Dynamic arrays
+    +-> arena + similar to strs above?
+    +-> chunker and have it grow up to a limit with no change needed?
+- For things like dynamic arrays, template macros for quicly implementing
+  complex types with different subtypes - bring out of macro form when debugging
+  actual implementation using -E flag.
+- Metaprogramming - think about, not use necessarily - or maybe provide an
+  interface to use it for other projects. Article on how to implement something
+  like this: https://www.rfleury.com/p/table-driven-code-generation
