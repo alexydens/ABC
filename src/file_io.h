@@ -7,7 +7,7 @@
 #define FILE_IO_H
 
 /* Core */
-#include <ABC/base.h>
+#include "base.h"
 
 /* Get the contents of the file */
 char* readFromFile(const char* path);

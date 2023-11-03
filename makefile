@@ -13,6 +13,7 @@ SRC_DIR=src
 .SILENT: build clean test
 
 build: $(SRC_DIR)/base.c $(SRC_DIR)/base.h
+	rm -rf $(BUILD_DIR)/*
 		echo "Compiling: base.c..."
 	gcc -c $(CFLAGS) $(SRC_DIR)/base.c -o $(BUILD_DIR)/base.o
 		echo "Compiling: arena_alloc.c..."

@@ -12,7 +12,7 @@ Arena createArena(size_t size) {
 /* Allocate some memory with the linear allocator */
 void* arena_alloc(Arena* arena, size_t size) {
   void* ret = (void*) arena->current;
-  ASSERT(arena->current + size <= arena->end);
+  if (!(arena->current + size <= arena->end)) *(i32*)0 = 0;
   arena->current += size;
   return ret;
 }

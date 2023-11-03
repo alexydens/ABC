@@ -7,8 +7,6 @@ char* readFromFile(const char* path) {
   char* str;
   i32 length = 0;
   ptr = fopen(path, "r");
-  ASSERT(ptr != 0);
-
   str = malloc(0);
 
   while (!feof(ptr)) {
